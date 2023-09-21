@@ -7,3 +7,12 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.nav-link, .navbar-brand{
+    color: #fff;
+}
+
+.active{
+    color: #fff;
+    text-decoration: underline;
+}
