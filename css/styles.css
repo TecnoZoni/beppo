@@ -1,8 +1,4 @@
-.navbar{
-    background-color: #008ce4;
-    padding: 1rem;
-}
-
+/* NavBar */
 .navbar-collapse{
     align-items: center;
     justify-content: space-between;
@@ -15,4 +11,22 @@
 .active{
     color: #fff;
     text-decoration: underline;
+}
+
+/* Carousel */
+
+.c-item{
+    height: 480px;
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+
+/* Redes Sociales */
+.filaSociales{
+    justify-content: space-evenly;
 }
