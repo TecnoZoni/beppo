@@ -1,25 +1,31 @@
 /* NavBar */
-.navbar-collapse{
+.navbar-collapse {
     align-items: center;
     justify-content: space-between;
 }
 
-.nav-link, .navbar-brand{
+.nav-link,
+.navbar-brand {
     color: #fff;
 }
 
-.active{
+.active {
     color: #fff;
     text-decoration: underline;
 }
 
+.dropdown-menu {
+    width: 300px;
+    overflow: hidden;
+}
+
 /* Carousel */
 
-.c-item{
+.c-item {
     height: 480px;
 }
 
-.c-img{
+.c-img {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.6);
@@ -27,6 +33,13 @@
 
 
 /* Redes Sociales */
-.filaSociales{
+.filaSociales {
     justify-content: space-evenly;
+}
+
+@media screen and (max-width:768) {
+    .dropdown-menu {
+        /* width: 100%; */
+        /* overflow: hidden; */
+    }
 }
