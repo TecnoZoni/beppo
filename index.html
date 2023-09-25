@@ -20,6 +20,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Styles -->
     <link rel="stylesheet" href="/css/styles.css">
 </head>
@@ -28,7 +30,7 @@
     <!-- Encabezado -->
     <header>
         <!-- Barra de navegacion -->
-        <nav class="navbar navbar-expand-md shadow-sm bg-primary p-3">
+        <nav class="navbar navbar-expand-md shadow-sm bg-primary p-1 fixed-top" id="navbar" data-aos="fade-right">
             <div class="container-fluid">
                 <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false"
@@ -36,16 +38,16 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar-toggler">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="#Inicio">
                         <img src="img/beppo.png" width="50" alt="Logo de la institución">
                         I.S.E.T. Nro 25 BEPPO LEVI
                     </a>
                     <ul class="navbar-nav d-flex ">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Principal</a>
+                            <a class="nav-link active" aria-current="page" href="#Inicio">Principal</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inscripción</a>
+                            <a class="nav-link" href="#Inscripcion">Inscripción</a>
                         </li>
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -53,7 +55,8 @@
                                 Carreras
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Técnico Superior en Desarrollo de Software</a>
+                                <li><a class="dropdown-item" href="./views/desarroloDeSoftware.html">Técnico Superior en
+                                        Desarrollo de Software</a>
                                 </li>
                                 <li><a class="dropdown-item" href="#">Analista en Medio Ambiente</a></li>
                                 <li><a class="dropdown-item" href="#">Técnico Superior en Comercio Exterior</a></li>
@@ -68,13 +71,10 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Noticias</a>
+                            <a class="nav-link" href="#Cedes">Nuestras cedes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Clima</a>
+                            <a class="nav-link" href="#Contacto">Contacto</a>
                         </li>
 
                     </ul>
@@ -83,9 +83,10 @@
         </nav>
     </header>
 
-    <main>
+    <main class="mt-5" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
         <!-- Seccion Hero-->
-        <section class="shadow-sm">
+        <section class="shadow-sm" id="Inicio" data-aos="fade-left">
             <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"
@@ -102,7 +103,8 @@
                             <p class="mt-5 fs-3 text-uppercase">Instituto Superior de educación técnica Nº25 "Beppo
                                 Levi"</p>
                             <p class="fs-1 fw-bold fw-bolder text-capitalize">Desarrollo De Software</p>
-                            <a href="#" type="button" class="btn btn-primary py-2 fs-5 mt-5">Vé nuestras Carreras</a>
+                            <a href="#Carreras" type="button" class="btn btn-primary py-2 fs-5 mt-5">Vé nuestras
+                                Carreras</a>
                         </div>
                     </div>
                     <div class="carousel-item c-item">
@@ -111,7 +113,8 @@
                             <p class="mt-5 fs-3 text-uppercase">Instituto Superior de educación técnica Nº25 "Beppo
                                 Levi"</p>
                             <p class="fs-1 fw-bold fw-bolder text-capitalize">Administración de Empresas</p>
-                            <a href="#" type="button" class="btn btn-primary py-2 fs-5 mt-5">Vé nuestras Carreras</a>
+                            <a href="#Carreras" type="button" class="btn btn-primary py-2 fs-5 mt-5">Vé nuestras
+                                Carreras</a>
                         </div>
                     </div>
                     <div class="carousel-item c-item">
@@ -120,7 +123,8 @@
                             <p class="mt-5 fs-3 text-uppercase">Instituto Superior de educación técnica Nº25 "Beppo
                                 Levi"</p>
                             <p class="fs-1 fw-bold fw-bolder text-capitalize">Técnico Quimico</p>
-                            <a href="#" type="button" class="btn btn-primary py-2 fs-5 mt-5">Vé nuestras Carreras</a>
+                            <a href="#Carreras" type="button" class="btn btn-primary py-2 fs-5 mt-5">Vé nuestras
+                                Carreras</a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +164,7 @@
         </section>
 
         <!-- Carreras -->
-        <section class="my-5 shadow-sm">
+        <section class="my-5 shadow-sm" id="Carreras" data-aos="fade-up-left">
             <div class="container text-center">
                 <h3 class="text-decoration-underline">Carreras</h3>
                 <div class="row row-cols-xxl-3 row-cols-xl-3  row-cols-sm-2 row-cols-1 mt-4">
@@ -214,7 +218,7 @@
         </section>
 
         <!-- Inscripcion -->
-        <section class="shadow-sm">
+        <section class="shadow-sm" id="Inscripcion">
             <div class="container shadow-sm">
                 <div class="row text-center">
                     <h3 class="text-decoration-underline">
@@ -246,7 +250,7 @@
         </section>
 
         <!-- Seccion Sedes -->
-        <section class="shadow-sm">
+        <section class="shadow-sm" id="Cedes">
             <div class="container grid text-center pt-3 pb-3">
                 <div class="row g-col-12 p-3">
                     <h3 class="text-decoration-underline">Nuestras Sedes</h3>
@@ -344,7 +348,7 @@
         </section>
 
         <!-- Contacto -->
-        <section class="shadow-sm pt-3">
+        <section class="shadow-sm py-3 my-3" id="Contacto">
             <div class="container">
                 <div class="row text-center">
                     <h3 class="text-decoration-underline my-3">Contacto</h3>
@@ -353,35 +357,76 @@
                     <form class="col-md-6">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre (requerido)</label>
-                            <input type="text" class="form-control" id="name"
-                                aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="name" name="nombre" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Tú correo electrónico (requerido)</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                            <label for="email" class="form-label">Tú correo electrónico (requerido)</label>
+                            <input type="email" class="form-control" id="email" name="correo" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label"></label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="subject" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="subject" name="asunto">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Nombre (requerido)</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <label for="message" class="form-label">Mensaje (requerido)</label>
+                            <textarea class="form-control" id="message" name="mensaje" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
             </div>
         </section>
 
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Información de Contacto</h5>
+                        <p>Teléfonos:
+                            <br>
+                            (03476) 447580
+                            <br>
+                            (03476) 426219
+                            <br>
+                            (0341) 4247844
+                        </p>
+                        <p>Email: info@iset25beppolevi.edu</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Enlaces Rápidos</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#Inicio">Inicio</a></li>
+                            <li><a href="#Inscripcion">Inscripción</a></li>
+                            <li><a href="#Cedes">Nuestras Cedes</a></li>
+                            <li><a href="#Contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Redes Sociales</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.facebook.com/ISET25/?locale=es_LA" target="_blank"><i
+                                        class="bi bi-facebook"></i> Facebook</a></li>
+                            <li><a href="https://www.instagram.com/iset25beppolevi" target="_blank"><i
+                                        class="bi bi-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12 text-center">
+                        <p>&copy; 2023 I.S.E.T. Nro 25 "BEPPO LEVI". Todos los derechos reservados. Creado con <i
+                                class="bi bi-heart"></i> por <a href="https://agustinminzoni.com"
+                                target="_blank">Agustin Minzoni</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 
-
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
