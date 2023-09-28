@@ -36,3 +36,12 @@
 .filaSociales {
     justify-content: space-evenly;
 }
+
+
+.btn-width{
+    width: fit-content;
+}
+
+.labels{
+    width: 100%;
+}
