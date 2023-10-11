@@ -39,3 +39,26 @@ document.getElementById('form')
                 alert(JSON.stringify(err));
             });
     });
+
+
+
+// Cierra el menú cuando se hace clic en un enlace y fuera del menú
+const navbarToggler = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+const navLinks = document.querySelectorAll('.navbar-nav a');
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
+    });
+});
+
+document.addEventListener('click', (event) => {
+    if (!navbar.contains(event.target)) {
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
+    }
+});
