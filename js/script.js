@@ -62,3 +62,25 @@ document.addEventListener('click', (event) => {
         }
     }
 });
+
+//Cambiar imgen del banner para los dispositivos moviles
+
+cambiarImagenResolucion = () => {
+    var imagen = document.getElementById("imgBanner");
+    var anchoPantalla = window.innerWidth;
+
+    if (anchoPantalla < 768) {
+        imagen.src = "img/carousel0-3(movil)6.png";
+        imagen.style.height = "100%";
+        imagen.style.objectFit = "cover";
+        imagen.style.filter = "brightness(0.6)";
+    } else {
+        imagen.src = "img/carousel0-3.png";
+        imagen.style.height = "100% ";
+        imagen.style.objectFit = "fill ";
+        imagen.style.filter = "brightness(0.6) ";
+    }
+};
+
+window.addEventListener("load", cambiarImagenResolucion);
+window.addEventListener("resize", cambiarImagenResolucion);
