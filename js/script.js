@@ -84,3 +84,19 @@ cambiarImagenResolucion = () => {
 
 window.addEventListener("load", cambiarImagenResolucion);
 window.addEventListener("resize", cambiarImagenResolucion);
+
+// Codigo para los modales de bootstrap
+document.addEventListener("DOMContentLoaded", ()=> {
+    const miModal = document.getElementById("MyModal");
+    const miModalInstance = new bootstrap.Modal(miModal);
+    const btnCloseModal = document.getElementById("close");
+
+    miModalInstance.show();
+
+    btnCloseModal.addEventListener('click', ()=>{
+        miModalInstance.hide();
+    })
+
+});
+
+
