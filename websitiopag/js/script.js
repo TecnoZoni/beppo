@@ -45,11 +45,11 @@ document.getElementById('form')
 // Cierra el menú cuando se hace clic en un enlace y fuera del menú
 const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarCollapse = document.querySelector('.navbar-collapse');
-const navLinks = document.querySelectorAll('.navbar-nav a');
+const navLinks = document.querySelectorAll('.navbar-nav');
 
 navLinks.forEach((link) => {
     link.addEventListener('click', () => {
-        if (navbarCollapse.classList.contains('show')) {
+        if (!navbarCollapse.classList.contains('show')) {
             navbarToggler.click();
         }
     });
